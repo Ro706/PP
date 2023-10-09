@@ -1,0 +1,3 @@
+which are the oprator which can not be overload and why?
+write c++ program to implement single inheritance class shape to initial the parameter of diff shape and class area is drive from shape class to implement to find out the area of circle square and reactangle
+write a c++ program ::create a class org to init the detail of the employee such as desg name total salary (basic da hra) of emp create a drive class calculate salary to calculate the total salary of emp if basic of emp is greater then 25000 then bonus amout 5000 is  else 3000 the display all the detail of employee for 5 

@@ -1,0 +1,14 @@
+polymorphism many form 
+compile time polymorphism 
+run time polymorphism
+ex - functionn/method overloading(compile time polymorphism)
+method overriding (run time polymorphism)
+polymorphism is one of the important OOPs concept which mean having many forms ..it is of two type 
+1)compile time poly
+2)run time poly
+compile time polymorphism -it implemented through function or method over loading .(inheritance)
+run time polymorphism - it implemented through method over riding .
+function and method over riding mean a single class may contain more then one function defination with the same name but they should deffer in there parameter and argument list .either in type of parameter or the order of parameter.
+Q.wAP to implement function overloading for addition of three different set of value.
+Q.wAP to implement method overloading to find the area of different shapes like square rectangle and circle.
+QwAP to over load the const to init and display the employ detail emp id emp name desigation doj and salary of that employee

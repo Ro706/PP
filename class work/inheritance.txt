@@ -1,0 +1,32 @@
+Inheritance :: inheriting the properties from one class to another class
+
+class A{
+--------
+--------
+--------
+};
+class B : public/private/protected A{
+--------
+--------
+--------
+--------
+}; 
+=>access specifier : private public protected
+type of inheritance :
+1)single inheritance
+[A]->[B]
+2)multiple inheritance
+[A]->[c]<-[B]
+3)multilevel inheritance
+[A]->[B]->[C]
+4)hybrid inheritance 
+[A]->[B]->[D]
+ |       ^   
+ [c]---->|
+5)hierchical inheritance
+[A]->[B]
+|---->[D]
+|---->[C]
+advan :: {reusability of code}
+
+

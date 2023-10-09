@@ -1,0 +1,8 @@
+classname operator symbol ( classname &obj){
+ classname res;
+ res.real = real + obj.real;
+ res.img = img +onj.img;
+ return res;  
+}
+
+
