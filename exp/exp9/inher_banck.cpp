@@ -1,68 +1,81 @@
-//All the banks operating in India are controlled by RBI.RBI has set guidelines which all banks
-//must follow for example-RBI has set minimum interest rate applicable to saving bank account to
-//4% equally. Write a program to implement bank functionality create class namely customer
-//account RBI as base classes and few derived classes as SBI,ICICI,AXIS.Asssume and
-//implement required member variables and functions in each class.
-#include<iostream>
-#include<string.h>
+#include <iostream>
 using namespace std;
+
 class RBI {
-    private:
-        int min_interest_rate; 
-        int min_balance; 
-    
-    public:
-        RBI() {
-            min_interest_rate = 4;
-            min_balance = 1000;
-        }
+protected:
+    string customerName;
+    long int accountNumber;
+    double accountBalance;
+    double minInterestRate;
+
+public:
+    RBI(const string& name, long int accNum, double balance, double interestRate)
+        : customerName(name), accountNumber(accNum), accountBalance(balance), minInterestRate(interestRate) {}
+
+    virtual void displayAccountInfo() {
+        cout << "Customer Name: " << customerName << endl;
+        cout << "Account Number: " << accountNumber << endl;
+        cout << "Account Balance: Rs. " << accountBalance << endl;
+        cout << "Minimum Interest Rate: " << minInterestRate << "%" << endl;
+    }
+
+    virtual void applyInterest() {
         
-        int get_min_interest_rate() {
-            return min_interest_rate;
-        }
-        
-        int get_min_balance() {
-            return min_balance;
-        }
+        double interest = accountBalance * (minInterestRate / 100);
+        accountBalance += interest;
+        cout << "Interest applied: Rs. " << interest << endl;
+    }
 };
 
-class CustomerAccount : public RBI {
-    private:
-        int acno; 
-        char name[50];
-        char type; 
-        int balance; 
-    
-    public:
-        CustomerAccount(int acc_no, char *acc_name, char acc_type, int bal) {
-            acno = acc_no;
-            strcpy(name, acc_name);
-            type = acc_type;
-            balance = bal;
-        }
-        
-        void deposit(int amount) {
-            balance += amount;
-            cout << "Deposited " << amount << " rupees to " << name << "'s account.\n";
-        }
-        
-        void withdraw(int amount) {
-            if (amount <= balance) {
-                balance -= amount;
-                cout << "Withdrawn " << amount << " rupees from " << name << "'s account.\n";
-            }
-            else {
-                cout << "Insufficient balance in " << name << "'s account.\n";
-            }
-        }
-        
-        void display() {
-            cout << "Account number: " << acno << "\n";
-            cout << "Account holder name: " << name << "\n";
-            cout << "Account type: " << type << "\n";
-            cout << "Account balance: " << balance << "\n";
-            cout << "Minimum interest rate: " << get_min_interest_rate() << "%\n";
-            cout << "Minimum balance: " << get_min_balance() << " rupees\n";
-        }
+class SBI : public RBI {
+public:
+    SBI(const string& name, long int accNum, double balance)
+        : RBI(name, accNum, balance, 4.0) {}  
+
+    void displayAccountInfo() override {
+        cout << "SBI Account Information:" << endl;
+        RBI::displayAccountInfo();  
+    }
 };
+
+class ICICI : public RBI {
+public:
+    ICICI(const string& name, long int accNum, double balance)
+        : RBI(name, accNum, balance, 4.0) {}  
+
+    void displayAccountInfo() override {
+        cout << "ICICI Account Information:" << endl;
+        RBI::displayAccountInfo();  
+    }
+};
+
+class AXIS : public RBI {
+public:
+    AXIS(const string& name, long int accNum, double balance)
+        : RBI(name, accNum, balance, 4.0) {}  
+
+    void displayAccountInfo() override {
+        cout << "AXIS Account Information:" << endl;
+        RBI::displayAccountInfo();  
+    }
+};
+
+int main() {
+    SBI sbiAccount("Rohit Mandal", 1321354645, 1000000.0);
+    ICICI iciciAccount("aditya jain", 9876543210, 1500.0);
+    AXIS axisAccount("nishant", 5432109876, 200000.0);
+
+    sbiAccount.displayAccountInfo();
+    sbiAccount.applyInterest();
+    cout<<"\n";
+
+    iciciAccount.displayAccountInfo();
+    iciciAccount.applyInterest();
+    cout<<"\n";
+
+    axisAccount.displayAccountInfo();
+    axisAccount.applyInterest();
+
+    return 0;
+}
 
