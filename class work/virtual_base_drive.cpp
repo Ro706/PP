@@ -8,6 +8,10 @@ class base{
 		void display(){
                         cout<<"This is not virtual function base class"<<endl;
                 }
+		void d(){
+ 			cout << " world";
+		}
+
 };
 class derived:public base{
 	public:
@@ -17,6 +21,9 @@ class derived:public base{
 		void display(){
 			cout<<"This is not virtual function"<<endl;
 		}
+		void d(){
+			cout << "Hello world";
+		}
 };
 int main(){
 	base * bp;
@@ -24,6 +31,7 @@ int main(){
 	bp = &d;
 	bp -> print();
 	bp -> display();
+	bp -> d();
 
 /*	derived * dp;
         base b;
