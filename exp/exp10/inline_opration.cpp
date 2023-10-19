@@ -1,33 +1,31 @@
 #include<iostream>
 using namespace std;
-class opration
+class operation
 {
 public:
 	int a=9,b=10;
 public:
-	operation(){cout<<"HelloWorld!";}; 
+	operation(){cout<<"HelloWorld!";} 
 	void add();
 	  void sub();
 	  void mul();
 	  void div();
 };
-inline opration::operation(){
+inline  void operation::add(){
+	cout<<a<<"+"<<b<<"="<<a+b<<endl;
 }
-inline  opration::add(){
-	cout<<a<<"+"<<b<<"="<<a+b;
+inline void operation::sub(){
+        cout<<a<<"-"<<b<<"="<<a-b<<endl;
 }
-inline opration::sub(){
-        cout<<a<<"-"<<b<<"="<<a-b;
+inline void operation::mul(){
+        cout<<a<<"*"<<b<<"="<<a*b<<endl;
 }
-inline opration::mul(){
-        cout<<a<<"*"<<b<<"="<<a*b;
-}
-inline opration::div(){
-        cout<<a<<"/"<<b<<"="<<a/b;
+inline void  operation::div(){
+        cout<<a<<"/"<<b<<"="<<a/b<<endl;
 }
 int main()
 {
-	opration op;
+	operation op;
 		op.add();
 		op.mul();
 		op.sub();
