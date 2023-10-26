@@ -1,0 +1,19 @@
+facts
+tom is cat
+shreya like to sing
+she his black hair
+jay like to play cricket
+
+--------------------------------
+syntax
+cat(tom).
+like_to_sing(shreya,song).
+of_color(hair,black).
+liker_to_play(jay,cricket).
+--------------------------------
+rules/pradicats
+happy(shreya):-
+	dances(shreya).
+hungry():-
+	search_for_food(tom).
+     
