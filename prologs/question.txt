@@ -1,0 +1,2 @@
+write a rule/ predicate for 
+--->rahul can go to play if, the schools has holiday and rahul is free
