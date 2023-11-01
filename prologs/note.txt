@@ -1,0 +1,1 @@
+define the facts for rahul and rohan are boys write one predicate to check whether rahul can play football if it is raining and rahul is free. 
