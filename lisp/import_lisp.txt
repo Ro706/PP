@@ -1,0 +1,33 @@
+1)atom:{	
+	1)hello	
+	2)12345
+	3)123abc
+	4)black#123
+}
+2)list:{
+	1)(i am list)
+	2)(a b c)d e f g h
+	3)(manager tom( sr manager joc))
+}
+3)string :{
+	1)"I am a string"
+	2)"Hello"
+}
+
+Lisp is a programming language that has an overall style that is organized around expressions and functions. 
+Every Lisp procedure is a function, and when called, it returns a data object as its value. 
+It is also commonly referred to as “functions” even though they may have side effects.
+
+Lisp is the second-oldest high-level programming language in the world which is invented by John McCarthy in 
+the year 1958 at the Massachusetts Institute of Technology.
+
+
+how to write comment in lisp -> ;
+ex - ;"hello world!"
+
+print statement
+;this is a comment
+(write-line "Hello world"); 
+
+
+
