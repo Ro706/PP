@@ -1,0 +1,8 @@
+(defun area ()
+  (princ "Enter a base: ")
+  (setq base(read))
+  (princ "Enter a height: ")
+  (setq height(read))
+  (format t "area of triangle:~2f"( /(* base height)2))
+  )
+(area)
