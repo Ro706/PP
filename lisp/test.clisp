@@ -1,0 +1,2 @@
+(write-line "Hello world"); this line will print Hello world
+(write (+ 1 2));this line will print 3
