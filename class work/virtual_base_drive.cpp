@@ -32,15 +32,14 @@ int main(){
 	bp -> print();
 	bp -> display();
 	bp -> d();
-
-/*	derived * dp;
+/*
+	derived * dp;
         base b;
         dp = &b;
         dp -> print();
      dp -> display();
 
 */
-
 
 	return 0;
 }
